@@ -29,12 +29,17 @@ object Hello {
     println("Hello Scala World!")
     println("Bonjour monde Scala!")
 
-    var x:Double = {
+//    var x:Double = {
+    // Any <-- AnyVal <-- Int... (can create user defined!)
+    //     <-- AnyRef (java.lang.Object) <-- String etc.
+    var x:Any = {
       println("calculating value")
-      99.123
+      99 + 100
     }
     println("x is " + x)
-//    println(s"x is ${x}")
+    x = "Hello";
+    println("x is " + x)
+    //    println(s"x is ${x}")
 //    println(f"x is ${x}%5.2f")
     // unqualified expression (no "dot") can leave out curlies
 //    println(s"x is $x")
@@ -43,6 +48,19 @@ object Hello {
     var h = new Hello
     println(s"h is ${h}")
     println(s"type of h is ${h.getClass}")
+
+    var n: Int = 99
+//    n = 3.14
+    n = 3.14.toInt
+    println(s"n is ${n}")
+
+    // most operators as expected for Java etc.
+
+    // val is preferred to var...
+    // val is effectively final var in Java or const in JavaScript and C#
+    // BUT NOT const in C/C++
+    // Scala highly encourages using val instead of var
+
   }
 }
 
