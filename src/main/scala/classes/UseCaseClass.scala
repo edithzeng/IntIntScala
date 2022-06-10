@@ -9,7 +9,7 @@ object UseCaseClass {
     println(c1)
     println(c1 == c2)
 
-    val c3 = new Automobile(2, "Blue")
+    val c3 = /*new */Automobile(2, "Blue")
 
     val thing: Any = c3
     thing match {

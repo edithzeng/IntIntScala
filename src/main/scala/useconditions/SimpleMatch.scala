@@ -8,11 +8,15 @@ object SimpleMatch {
   def main(args: Array[String]): Unit = {
 //    val x: Any = "Hello"
     val x: Any = 99.9
-    x match {
+    val res = x match {
       case "Hello" => println("It's a greeting")
-      case 99 => println("it's a number")
+      case 99 =>
+        println("it's a number")
+        println("really, it's 99")
+        101
       case _ => println("it's something else")
     }
+    println(s"res is ${res}")
 
     println(s"sum of 1 and 2 is ${add(1, 2)}")
 
